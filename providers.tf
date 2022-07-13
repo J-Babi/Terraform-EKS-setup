@@ -2,8 +2,18 @@
 # Provider Configuration
 #
 
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
+}
+
 provider "aws" {
   region  = "us-east-2"
+  profile = "default"
 }
 
 # Using these data sources allows the configuration to be
